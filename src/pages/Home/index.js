@@ -1,6 +1,8 @@
 import {FiLink} from 'react-icons/fi'
 import './home.css'
 
+import Menu from '../../components/menu'
+
 export default function Home() {
     return (
       <div className="container-home">
@@ -19,6 +21,7 @@ export default function Home() {
           </div>
           <button>Encurtar Link</button>
         </div>
+        <Menu/>
       </div>
     );
 }

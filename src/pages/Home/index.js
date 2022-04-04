@@ -3,6 +3,7 @@ import {FiLink} from 'react-icons/fi'
 import './home.css'
 
 import Menu from '../../components/menu'
+import LinkItem from '../../components/LinkItem'
 
 export default function Home() {
   const [link, setLink] = useState('');
@@ -31,6 +32,7 @@ export default function Home() {
           <button onClick={handleShortLink}>Encurtar Link</button>
         </div>
         <Menu/>
+        <LinkItem/>
       </div>
     );
 }

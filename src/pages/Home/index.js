@@ -7,9 +7,10 @@ import LinkItem from '../../components/LinkItem'
 
 export default function Home() {
   const [link, setLink] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   function handleShortLink(){
-    alert('Meu link ' + link);
+    setShowModal(true);
   }
 
     return (
@@ -32,7 +33,12 @@ export default function Home() {
           <button onClick={handleShortLink}>Encurtar Link</button>
         </div>
         <Menu/>
-        <LinkItem/>
+        { showModal && (
+            <LinkItem
+            closeModal={()=>setShowModal(false)}
+            />
+          )
+        }
       </div>
     );
 }
